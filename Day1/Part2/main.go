@@ -43,7 +43,7 @@ func ProcessData(mass []int) int {
 	for i := 0; i < len(mass); i++ {
 		added_mass := mass[i]
 
-		for (added_mass >= 0) {
+		for {
 			added_mass = CalculateMass(added_mass)
 
 			if (added_mass < 0) {
