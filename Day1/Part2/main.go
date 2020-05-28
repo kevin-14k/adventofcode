@@ -2,17 +2,17 @@ package main
 
 import (
 		"fmt"
-        "os"
-        "log"
-        "bufio"
-        "strconv"
+		"os"
+		"log"
+		"bufio"
+		"strconv"
 )
 
 func ReadData() ([]int) {
 	file, err := os.Open("data")
 	
 	if err != nil {
-    	log.Fatal(err)
+		log.Fatal(err)
 	}
 	defer file.Close()
 
@@ -22,12 +22,12 @@ func ReadData() ([]int) {
 		n, err := strconv.Atoi(scanner.Text())
 
 		if err == nil {
-	    	data_array = append(data_array, n)
-	    }
+			data_array = append(data_array, n)
+		}
 	}
 
 	if err := scanner.Err(); err != nil {
-    	log.Fatal(err)
+		log.Fatal(err)
 	}
 
 	return data_array
@@ -58,5 +58,5 @@ func ProcessData(mass []int) int {
 }
 
 func main() {
-    fmt.Println(ProcessData(ReadData()))
+	fmt.Println(ProcessData(ReadData()))
 }
