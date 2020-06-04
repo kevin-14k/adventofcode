@@ -84,9 +84,9 @@ func GetPoints(path []string) ([][]int) {
 func main() {
 	data_file				:= ReadData()
 	first_path, second_path := ParseData(data_file)
-	first_path_points       := GetPoints(first_path)
-	second_path_points      := GetPoints(second_path)
-	lowest_distance         := FindLowestDistance(first_path_points, second_path_points)
+	first_path_points		:= GetPoints(first_path)
+	second_path_points		:= GetPoints(second_path)
+	lowest_distance			:= FindLowestDistance(first_path_points, second_path_points)
 
 	fmt.Println(lowest_distance)
 }
