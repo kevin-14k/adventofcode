@@ -64,10 +64,10 @@ func FindLowestDistance(first_path_points [][]int, second_path_points [][]int) (
 func GetPoints(path []string) ([][]int) {
 	var points [][]int
 
-	drx := map[string]int{ "U": 0, "R": 1, "D": 0, "L": -1, }
-	dry := map[string]int{ "U": 1, "R": 0, "D": -1, "L": 0, }
 	x := 0
 	y := 0
+	drx := map[string]int{ "U": 0, "R": 1, "D": 0, "L": -1, }
+	dry := map[string]int{ "U": 1, "R": 0, "D": -1, "L": 0, }
 	for i := 0; i < len(path); i++ {
 		letter, number := ParseMove(path[i])
 
@@ -77,6 +77,7 @@ func GetPoints(path []string) ([][]int) {
 			points = append(points, []int{x,y})
 		}
 	}
+
 	return points
 }
 
