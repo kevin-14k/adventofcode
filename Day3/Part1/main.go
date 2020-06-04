@@ -81,7 +81,7 @@ func GetPoints(path []string) ([][]int) {
 }
 
 func main() {
-	data_file 			    := ReadData()
+	data_file				:= ReadData()
 	first_path, second_path := ParseData(data_file)
 	first_path_points       := GetPoints(first_path)
 	second_path_points      := GetPoints(second_path)
