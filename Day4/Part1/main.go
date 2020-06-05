@@ -20,7 +20,7 @@ func ConvertIntToArray(n int) ([]int) {
 }
 
 func main() {
-	var match []int
+	nmatch := 0
 
 	for input := 246540; input <= 787419; input++ {
 		ari := ConvertIntToArray(input)
@@ -31,11 +31,11 @@ func main() {
 			if (prev > v) { break }
 			if (prev == v) { dup = true }
 
-			if (i == 5 && dup == true) { match = append(match, input) }
+			if (i == 5 && dup == true) { nmatch++ }
 
 			prev = v
 		}
 	}
 
-	fmt.Println(len(match))
+	fmt.Println(nmatch)
 }
