@@ -21,9 +21,7 @@ func ConvertIntToArray(n int) ([]int) {
 
 func OnlyOneDuplcate(m map[string]int) bool {
 	for _, value := range m {
-		if (value == 2) {
-			return true
-		}
+		if (value == 2) { return true }
 	}
 
 	return false
