@@ -31,8 +31,8 @@ func main() {
 	nmatch := 0
 
 	for input := 246540; input <= 787419; input++ {
-		ari := ConvertIntToArray(input)
 		m := map[string]int{"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0}
+		ari := ConvertIntToArray(input)
 
 		prev := 0
 		for i, v := range ari {
